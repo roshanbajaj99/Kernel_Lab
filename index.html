@@ -187,6 +187,105 @@ select:focus-visible, .control select:focus-visible {
   outline-offset: 2px;
 }
 </style>
+<style id="reading-comfort">
+/* === Readability pass: make teaching text comfortable at 100% browser zoom === */
+:root { --reading-copy:#33445b; }
+body { font-size:17.5px; line-height:1.76; }
+p { font-size:17px; line-height:1.78; color:var(--reading-copy); margin-bottom:16px; }
+.lead { font-size:19px; line-height:1.78; }
+h1 { font-size:clamp(34px,4.1vw,54px); line-height:1.09; letter-spacing:-.04em; }
+h2 { font-size:clamp(28px,3vw,38px); line-height:1.17; letter-spacing:-.032em; }
+h3 { font-size:19px; line-height:1.4; letter-spacing:-.018em; }
+.section-intro { margin-bottom:32px; }
+.card { padding:24px; }
+.card p { font-size:16.5px; line-height:1.76; }
+.small, .muted.small, .footer-note { font-size:14px; line-height:1.68; }
+.caption, .metric .caption { font-size:13.5px; line-height:1.55; }
+.tag { font-size:11.5px; }
+.pill { font-size:11.5px; }
+.crumb { font-size:12px; }
+.navbtn { font-size:14px; line-height:1.5; padding:10px 11px; }
+.navnum { font-size:11px; }
+.nav-label { font-size:11px; }
+.subbrand { font-size:13px; }
+.sidebar-bottom { font-size:12px; }
+.btn { font-size:14px; padding:11px 16px; }
+.stage { padding:17px; }
+.stage strong { font-size:15.5px; line-height:1.45; }
+.stage .step { font-size:11.5px; }
+.pipe-title, .comparison-label { font-size:14px; line-height:1.55; }
+.node { font-size:15px; line-height:1.55; padding:14px 12px; }
+.node em { font-size:13.5px; line-height:1.55; }
+.pipe-mid { font-size:13px; line-height:1.6; }
+.arrow { font-size:24px; }
+.control label { font-size:14.5px; line-height:1.55; gap:12px; }
+select, option, input, textarea { font-size:15.5px; }
+.chip { font-size:13px; }
+.formula { font-size:clamp(23px,2.7vw,31px); }
+.eq { font-size:19px; line-height:1.8; padding:18px 20px; }
+.eq .note { font-size:13.5px; }
+.code { font-size:14px; line-height:1.8; padding:19px; }
+.inline-code { font-size:.94em; }
+.callout { font-size:15px; line-height:1.75; padding:15px 17px; }
+.checkrow { font-size:15.5px; line-height:1.7; padding:13px 0; }
+.statsline span, .legend { font-size:13px; }
+.mini-node { font-size:14px; padding:8px 11px; }
+.result-bar-row { font-size:14px; }
+.result-bar-label, .result-bar-value { font-size:13.5px; }
+table { font-size:14px; line-height:1.6; }
+th { font-size:11.5px; }
+td, th { padding:11px 12px; }
+.control { margin:18px 0; }
+.actions { margin-top:36px; padding-top:22px; }
+#navstatus { font-size:14px; }
+/* A clear, unobtrusive reading-size control in the chapter header. */
+.top-actions { display:flex; align-items:center; justify-content:flex-end; gap:10px; flex-wrap:wrap; }
+.reading-tools { display:flex; align-items:center; gap:5px; border:1px solid #D5E0ED; background:rgba(255,255,255,.9); padding:4px; border-radius:12px; }
+.reading-tools .reading-label { color:#52647B; font-size:12px; padding:0 5px; white-space:nowrap; }
+.reading-tools button { color:#20344d; background:#f4f7fb; border:1px solid #dce4ef; border-radius:8px; min-width:34px; min-height:32px; font-weight:800; font-size:14px; line-height:1; }
+.reading-tools button:hover { background:#e6eef9; border-color:#b5c6dc; }
+#reading-size-status { font-size:12px; color:#52647b; min-width:54px; text-align:center; }
+html[data-reading-size="1"] body { font-size:19px; }
+html[data-reading-size="1"] p, html[data-reading-size="1"] .card p { font-size:19px; }
+html[data-reading-size="1"] .lead { font-size:20.5px; }
+html[data-reading-size="1"] .small, html[data-reading-size="1"] .muted.small, html[data-reading-size="1"] .footer-note { font-size:15.5px; }
+html[data-reading-size="1"] .caption, html[data-reading-size="1"] .metric .caption { font-size:14.5px; }
+html[data-reading-size="1"] .node { font-size:16.5px; }
+html[data-reading-size="1"] .node em { font-size:14.5px; }
+html[data-reading-size="1"] .control label, html[data-reading-size="1"] .result-bar-row, html[data-reading-size="1"] .checkrow { font-size:16px; }
+html[data-reading-size="1"] .code { font-size:15.5px; }
+html[data-reading-size="1"] table { font-size:15.5px; }
+html[data-reading-size="2"] body { font-size:20px; }
+html[data-reading-size="2"] p, html[data-reading-size="2"] .card p { font-size:20px; }
+html[data-reading-size="2"] .lead { font-size:22px; }
+html[data-reading-size="2"] .small, html[data-reading-size="2"] .muted.small, html[data-reading-size="2"] .footer-note { font-size:17px; }
+html[data-reading-size="2"] .caption, html[data-reading-size="2"] .metric .caption { font-size:15.5px; }
+html[data-reading-size="2"] .node { font-size:18px; }
+html[data-reading-size="2"] .node em { font-size:16px; }
+html[data-reading-size="2"] .control label, html[data-reading-size="2"] .result-bar-row, html[data-reading-size="2"] .checkrow { font-size:17.5px; }
+html[data-reading-size="2"] .code { font-size:17px; }
+html[data-reading-size="2"] table { font-size:17px; }
+@media (max-width:940px) {
+  .topline { align-items:flex-start; }
+  .top-actions { justify-content:flex-start; }
+  .sidebar { gap:10px; }
+  .navbtn { font-size:14px; }
+}
+@media (max-width:600px) {
+  body { font-size:17px; }
+  p, .card p { font-size:16.5px; }
+  .lead { font-size:18px; }
+  .main { padding:22px 16px 36px; }
+  .card { padding:19px; }
+  .topline { gap:12px; }
+  .top-actions { width:100%; justify-content:space-between; }
+  .reading-tools .reading-label { display:none; }
+  .formula { font-size:23px; }
+  .eq { font-size:17px; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms!important; transition-duration:.01ms!important; } }
+
+</style>
 </head>
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
@@ -208,7 +307,7 @@ select:focus-visible, .control select:focus-visible {
     </div>
   </aside>
   <main class="main" id="main-content">
-    <div class="topline"><div class="crumb" id="crumb">CHAPTER 01 / THE BIG PICTURE</div><div class="pill">INTERACTIVE TUTORIAL <span style="color:var(--cyan)">●</span></div></div>
+    <div class="topline"><div class="crumb" id="crumb">CHAPTER 01 / THE BIG PICTURE</div><div class="top-actions"><div class="pill">INTERACTIVE TUTORIAL <span style="color:var(--cyan)">●</span></div><div class="reading-tools" role="group" aria-label="Reading text size"><span class="reading-label">Text size</span><button type="button" aria-label="Decrease text size" title="Decrease text size" onclick="setReadingSize(-1)">A−</button><span id="reading-size-status" aria-live="polite">Standard</span><button type="button" aria-label="Increase text size" title="Increase text size" onclick="setReadingSize(1)">A+</button></div></div></div>
     <div class="progress" id="chapter-progress" role="progressbar" aria-label="Chapter progress" aria-valuemin="1" aria-valuemax="19" aria-valuenow="1" aria-valuetext="Chapter 1 of 19"><span id="progressbar"></span></div>
 
     <section class="section active" data-title="The big picture">
@@ -391,6 +490,17 @@ select:focus-visible, .control select:focus-visible {
   </main>
 </div>
 <script>
+function setReadingSize(delta){
+ const root=document.documentElement;
+ const old=Number(root.dataset.readingSize||0);
+ const next=Math.max(0,Math.min(2,old+delta));
+ root.dataset.readingSize=String(next);
+ const label=next===0?'Standard':next===1?'Large':'Extra large';
+ const status=document.getElementById('reading-size-status');
+ if(status)status.textContent=label;
+ try{localStorage.setItem('kernelLabReadingSize',String(next));}catch(e){}
+}
+try{const saved=Number(localStorage.getItem('kernelLabReadingSize'));if(Number.isFinite(saved)&&saved>=0&&saved<=2){document.documentElement.dataset.readingSize=String(saved);}}catch(e){}
 let current=0;const sections=[...document.querySelectorAll('.section')];
 const navlist=document.getElementById('navlist');
 navlist.innerHTML=sections.map((s,i)=>`<button class="navbtn ${i===0?'active':''}" data-target="${i}"><span class="navnum">${String(i+1).padStart(2,'0')}</span> ${s.dataset.title}</button>`).join('');
