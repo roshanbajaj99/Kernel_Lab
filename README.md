@@ -1,4 +1,4 @@
-# GPU Kernel Lab
+# Kernel Lab
 
 An interactive research walkthrough for matrix-free FEM, fused CUDA kernels, GPU memory traffic, SIMP topology optimization, BF16 WMMA, solver performance, and thesis experimentation.
 
